@@ -1,0 +1,150 @@
+{
+  "conditional_series": {
+    "latex": "\\sum_{n=1}^{\\infty} a_n \\text{ 收敛},\\qquad \\sum_{n=1}^{\\infty}|a_n| \\text{ 发散}",
+    "plain": "级数本身收敛，但绝对值级数发散；重新排列可能改变其和。"
+  },
+  "cauchy_sequence": {
+    "latex": "\\forall\\varepsilon>0,\\ \\exists N,\\ m,n>N\\Rightarrow |x_m-x_n|<\\varepsilon",
+    "plain": "足够靠后的任意两项都彼此接近，无需预先知道极限在哪里。"
+  },
+  "cantor_function": {
+    "latex": "F(0)=0,\\quad F(1)=1,\\quad F'(x)=0\\ \\text{ a.e.}",
+    "plain": "单调地从 0 增长到 1，却几乎处处导数为 0。"
+  },
+  "weierstrass_function": {
+    "latex": "W(x)=\\sum_{n=0}^{\\infty}a^n\\cos(b^n\\pi x),\\qquad 0<a<1",
+    "plain": "经典的处处连续、处处不可微函数。"
+  },
+  "eigenvector": {
+    "latex": "A\\mathbf v=\\lambda\\mathbf v,\\qquad \\mathbf v\\ne0",
+    "plain": "线性变换只改变它的伸缩比例，不改变方向。"
+  },
+  "projection_matrix": {
+    "latex": "P^2=P",
+    "plain": "把向量投影到选定子空间；投影第二次不会继续改变结果。"
+  },
+  "least_squares": {
+    "latex": "\\hat x=\\operatorname*{arg\\,min}_{x}\\lVert Ax-b\\rVert_2^2",
+    "plain": "精确解不存在时，选择总体误差最小的近似解。"
+  },
+  "normal_distribution": {
+    "latex": "X\\sim\\mathcal N(\\mu,\\sigma^2)",
+    "plain": "概率集中在均值附近，同时保留向两侧无限延伸的尾部。"
+  },
+  "cauchy_distribution": {
+    "latex": "f(x)=\\frac{1}{\\pi\\gamma\\left[1+\\left(\\frac{x-x_0}{\\gamma}\\right)^2\\right]}",
+    "plain": "典型重尾分布，其期望与方差都不存在。"
+  },
+  "nonabelian_group": {
+    "latex": "\\exists a,b\\in G,\\qquad ab\\ne ba",
+    "plain": "交换两个元素的作用次序，结果可能随之改变。"
+  },
+  "zero_divisor": {
+    "latex": "a\\ne0,\\ b\\ne0,\\qquad ab=0",
+    "plain": "两个非零元素相乘，却得到了零。"
+  },
+  "finite_field": {
+    "latex": "|\\mathbb F_q|=q<\\infty",
+    "plain": "元素数量有限，但加减乘除仍在其中封闭。"
+  },
+  "cyclic_group": {
+    "latex": "G=\\langle g\\rangle=\\{g^n:n\\in\\mathbb Z\\}",
+    "plain": "整个群都由同一个生成元反复作用得到。"
+  },
+  "homomorphism": {
+    "latex": "\\varphi(ab)=\\varphi(a)\\varphi(b)",
+    "plain": "从一个结构映到另一个结构，同时保留运算关系。"
+  },
+  "holomorphic_function": {
+    "latex": "f'(z)=\\lim_{h\\to0}\\frac{f(z+h)-f(z)}{h}\\quad(z\\in\\Omega)",
+    "plain": "在复平面区域内处处复可微，因此具有极强的局部与整体刚性。"
+  },
+  "meromorphic_function": {
+    "latex": "f:\\Omega\\to\\widehat{\\mathbb C}\\quad\\text{除孤立极点外全纯}",
+    "plain": "绝大多数地方全纯，只允许少数可描述的极点。"
+  },
+  "logarithm_branch": {
+    "latex": "e^{\\operatorname{Log}z}=z\\qquad(z\\in\\Omega)",
+    "plain": "在避开适当割线的定义域上，为多值复对数选定单值分支。"
+  },
+  "essential_singularity": {
+    "latex": "f(z)=\\sum_{n=-\\infty}^{\\infty}a_n(z-z_0)^n,\\qquad a_{-n}\\ne0\\ \\text{ infinitely often}",
+    "plain": "Laurent 展开含无穷多个负次项，既不可去，也不是极点。"
+  },
+  "harmonic_function": {
+    "latex": "\\Delta u=0",
+    "plain": "满足 Laplace 方程，并具有平均值性质。"
+  },
+  "power_series": {
+    "latex": "\\sum_{n=0}^{\\infty}a_n(z-z_0)^n,\\qquad |z-z_0|<R",
+    "plain": "围绕中心展开，并只在收敛半径以内保证收敛。"
+  },
+  "prime_number": {
+    "latex": "p>1,\\qquad d\\mid p\\Rightarrow d\\in\\{1,p\\}",
+    "plain": "只能被 1 和自身整除的正整数。"
+  },
+  "transcendental_number": {
+    "latex": "P(\\alpha)\\ne0\\qquad\\forall P\\in\\mathbb Z[x]\\setminus\\{0\\}",
+    "plain": "不是任何非零整系数多项式的根。"
+  },
+  "empty_set": {
+    "latex": "\\varnothing=\\{\\}",
+    "plain": "不含任何元素，却是每一个集合的子集。"
+  },
+  "cantor_set": {
+    "latex": "C=\\left\\{\\sum_{n=1}^{\\infty}\\frac{2a_n}{3^n}:a_n\\in\\{0,1\\}\\right\\}",
+    "plain": "闭、无处稠密、没有孤立点且不可数，同时内部为空。"
+  },
+  "embedding_map": {
+    "latex": "\\iota:X\\hookrightarrow Y",
+    "plain": "把一个对象忠实放进另一个空间，保持原有结构但不必覆盖目标空间。"
+  },
+  "lagrange_multiplier": {
+    "latex": "\\nabla f(x)=\\lambda\\nabla g(x),\\qquad g(x)=0",
+    "plain": "在约束条件下寻找目标函数的极值。"
+  },
+  "dirichlet_function": {
+    "latex": "D(x)=\\mathbf 1_{\\mathbb Q}(x)=\\begin{cases}1,&x\\in\\mathbb Q,\\\\0,&x\\notin\\mathbb Q.\\end{cases}",
+    "plain": "在有理数和无理数上取不同值，并且处处不连续。"
+  },
+  "degenerate_map": {
+    "latex": "\\dim\\ker T\\gg0,\\qquad \\operatorname{rank}T\\ll\\dim V",
+    "plain": "大量输入被映到零，输出空间的维数远低于定义域。"
+  },
+  "asymptotically_stable_equilibrium": {
+    "latex": "x(0)\\approx x_*\\quad\\Longrightarrow\\quad x(t)\\to x_*\\ (t\\to\\infty)",
+    "plain": "附近轨道受到扰动后仍会逐渐收敛回平衡点。"
+  },
+  "saddle_point": {
+    "latex": "\\operatorname{Re}\\lambda_s<0<\\operatorname{Re}\\lambda_u",
+    "plain": "同时拥有稳定方向和不稳定方向。"
+  },
+  "separable_ode": {
+    "latex": "\\frac{dy}{dx}=f(x)g(y)\\quad\\Longrightarrow\\quad\\frac{dy}{g(y)}=f(x)\\,dx",
+    "plain": "把两个变量移到等式两边，再分别积分。"
+  },
+  "finite_time_blowup": {
+    "latex": "\\lim_{t\\to T^-}|y(t)|=\\infty,\\qquad T<\\infty",
+    "plain": "解在某个有限时刻趋于无穷，无法继续延拓为有限解。"
+  },
+  "integrating_factor": {
+    "latex": "(\\mu y)'=\\mu y'+\\mu' y",
+    "plain": "乘上适当函数，使原方程能够写成一个完整导数或恰当微分。"
+  },
+  "unique_ivp": {
+    "latex": "y'=f(t,y),\\qquad y(t_0)=y_0\\quad\\Longrightarrow\\quad\\exists!\\,y(t)",
+    "plain": "在适当条件下，一个初值确定唯一的局部解。"
+  },
+  "initial_sensitive_system": {
+    "latex": "\\|x_0-y_0\\|\\ll1,\\qquad \\|\\Phi_t(x_0)-\\Phi_t(y_0)\\|>\\delta",
+    "plain": "极其接近的初始状态，随时间演化出显著差异。"
+  },
+  "variation_of_constants": {
+    "latex": "x(t)=\\Phi(t)\\left[c+\\int_{t_0}^{t}\\Phi(s)^{-1}g(s)\\,ds\\right]",
+    "plain": "把齐次解中的常数改为随时间变化的函数，以吸收外部作用。"
+  },
+  "picard_iteration": {
+    "latex": "y_{n+1}(t)=y_0+\\int_{t_0}^{t}f(s,y_n(s))\\,ds",
+    "plain": "从初始近似出发反复代入，在适当条件下收敛到方程的解。"
+  }
+}
