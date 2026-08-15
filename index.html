@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f0e7" />
+    <meta name="description" content="MathBTI：28 道题，测出你是哪一种数学对象。零科学依据，纯属娱乐。" />
+    <meta property="og:title" content="MathBTI｜无厘头数学人格测试" />
+    <meta property="og:description" content="28 道题，37 种数学对象。看看你最后收敛到哪里。" />
+    <meta property="og:type" content="website" />
+    <title>MathBTI｜无厘头数学人格测试</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+    <script defer src="site-data.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <header class="site-header">
+      <button class="wordmark" type="button" data-action="home" aria-label="返回首页">
+        <span>Math</span><strong>BTI</strong>
+      </button>
+      <nav aria-label="主导航">
+        <button class="nav-link" type="button" data-action="gallery">结果图鉴</button>
+        <button class="nav-link" type="button" data-action="about">这是什么</button>
+      </nav>
+    </header>
+
+    <main id="app" tabindex="-1">
+      <section id="home-screen" class="screen home-screen" aria-labelledby="home-title">
+        <div class="hero-copy">
+          <p class="eyebrow">NO SCIENCE · ONLY MATH OBJECTS</p>
+          <h1 id="home-title"><span>Math</span><em>BTI</em></h1>
+          <p class="hero-subtitle">无厘头数学人格测试</p>
+          <p class="hero-lede">回答 28 个时而正经、时而不负责任的问题，看看你最后收敛成了什么。</p>
+          <div class="hero-actions">
+            <button id="start-button" class="primary-button" type="button">开始测试 <span>→</span></button>
+            <button id="resume-button" class="secondary-button is-hidden" type="button">继续上次测试</button>
+          </div>
+          <p class="fine-print">约 5 分钟 · 37 种结果 · 0% 科学依据</p>
+        </div>
+        <div class="hero-object" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="hero-formula">f : X → Y</div>
+          <span class="point point-a"></span>
+          <span class="point point-b"></span>
+          <span class="point point-c"></span>
+          <p>在适当的范畴中<br />一切都很自然</p>
+        </div>
+      </section>
+
+      <section id="quiz-screen" class="screen quiz-screen is-hidden" aria-labelledby="question-title">
+        <div class="quiz-topline">
+          <button id="back-button" class="icon-button" type="button" aria-label="上一题">←</button>
+          <div class="progress-wrap" aria-label="测试进度">
+            <div class="progress-meta"><span id="progress-label">01 / 28</span><span id="progress-percent">4%</span></div>
+            <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+          </div>
+          <button id="quit-button" class="icon-button" type="button" aria-label="退出测试">×</button>
+        </div>
+        <article class="question-card">
+          <p id="question-kicker" class="question-kicker">Q01</p>
+          <h2 id="question-title"></h2>
+          <div id="question-stem" class="question-stem"></div>
+          <div id="options" class="options" role="group" aria-label="答案选项"></div>
+        </article>
+        <p class="keyboard-hint">选择后自动进入下一题 · 可以返回修改</p>
+      </section>
+
+      <section id="result-screen" class="screen result-screen is-hidden" aria-live="polite">
+        <div class="result-hero">
+          <p class="eyebrow">YOUR MATHEMATICAL OBJECT IS</p>
+          <h1 id="result-name"></h1>
+          <div class="definition-card">
+            <p class="definition-label">定义先行</p>
+            <div id="result-formula" class="result-formula"></div>
+            <p id="result-definition" class="definition-plain"></p>
+          </div>
+          <p id="result-tagline" class="result-tagline"></p>
+        </div>
+
+        <div class="result-grid">
+          <article class="portrait-card">
+            <p class="section-number">01 / 人物小传</p>
+            <p id="result-portrait" class="portrait-copy"></p>
+            <div class="math-note">
+              <span>数学旁注</span>
+              <p id="result-note"></p>
+            </div>
+          </article>
+          <aside class="coordinate-card">
+            <p class="section-number">02 / 七维坐标</p>
+            <div id="coordinate-bars" class="coordinate-bars"></div>
+            <p class="coordinate-note">坐标只负责把你送到最近的对象，不负责理解你。</p>
+          </aside>
+        </div>
+
+        <div class="result-actions">
+          <button id="share-button" class="primary-button" type="button">分享结果 <span>↗</span></button>
+          <button id="restart-button" class="secondary-button" type="button">重新测试</button>
+        </div>
+        <p id="share-status" class="share-status" aria-live="polite"></p>
+      </section>
+
+      <section id="gallery-screen" class="screen gallery-screen is-hidden" aria-labelledby="gallery-title">
+        <div class="page-heading">
+          <p class="eyebrow">THE COMPLETE SPACE</p>
+          <h1 id="gallery-title">37 种可能的结果</h1>
+          <p>不是分类学，只是把一些数学对象暂时借给人类。</p>
+        </div>
+        <div id="gallery-grid" class="gallery-grid"></div>
+      </section>
+
+      <section id="about-screen" class="screen about-screen is-hidden" aria-labelledby="about-title">
+        <div class="page-heading">
+          <p class="eyebrow">ABOUT THIS NONSENSE</p>
+          <h1 id="about-title">这是什么？</h1>
+        </div>
+        <div class="about-layout">
+          <article>
+            <h2>它不分析人格。</h2>
+            <p>MathBTI 是一个纯娱乐测试。题目答案会累积成七维坐标，再与 37 个数学对象的预设坐标比较；离你最近的对象，获得解释你的临时资格。</p>
+          </article>
+          <article>
+            <h2>为什么先给定义？</h2>
+            <p>因为比喻的笑点来自数学对象本身。结果页先用一条公式和一句人话说明对象，再把它借来写一段人物小传。</p>
+          </article>
+          <article>
+            <h2>结果为什么会变？</h2>
+            <p>相邻对象本来就可能很近，并列时还会随机选择。请把它当作一次抽签，而不是一次诊断。</p>
+          </article>
+        </div>
+        <button class="primary-button" type="button" data-action="start">现在开始 <span>→</span></button>
+      </section>
+    </main>
+
+    <footer>
+      <p>MathBTI · 无厘头数学人格测试</p>
+      <p>没有失去一般性，只是失去了一点科学依据。</p>
+    </footer>
+  </body>
+</html>
