@@ -296,7 +296,7 @@ main:focus { outline: none; }
 .page-heading h1 { margin: 0 0 14px; font-family: var(--serif); font-size: clamp(2.8rem, 7vw, 5.8rem); line-height: 1.05; }
 .page-heading > p:last-child { color: var(--muted); }
 .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-.gallery-card { position: relative; display: flex; width: 100%; min-height: 150px; padding: 16px 20px 18px; flex-direction: column; align-items: stretch; justify-content: flex-start; border: 1px solid var(--line); background: rgba(255,255,255,0.55); cursor: pointer; text-align: left; transition: transform 160ms, border-color 160ms, box-shadow 160ms; }
+.gallery-card { position: relative; display: flex; width: 100%; min-height: 150px; padding: 23px 20px 18px; flex-direction: column; align-items: stretch; justify-content: flex-start; border: 1px solid var(--line); background: rgba(255,255,255,0.55); cursor: pointer; text-align: left; transition: transform 160ms, border-color 160ms, box-shadow 160ms; }
 .gallery-card:hover { transform: translateY(-4px); border-color: var(--ink); box-shadow: 7px 7px 0 var(--acid); }
 .gallery-index { display: block; color: var(--blue); font-size: 0.7rem; font-weight: 800; line-height: 1; }
 .gallery-card h2 { margin: 10px 0 7px; font-family: var(--serif); font-size: 1.35rem; line-height: 1.25; }
