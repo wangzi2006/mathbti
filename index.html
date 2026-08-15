@@ -42,13 +42,28 @@
           </div>
           <p class="fine-print">约 5 分钟 · 37 种结果 · 0% 科学依据</p>
         </div>
-        <div class="hero-object" aria-hidden="true">
-          <div class="orbit orbit-one"></div>
-          <div class="orbit orbit-two"></div>
-          <div class="hero-formula">f : X → Y</div>
-          <span class="point point-a"></span>
-          <span class="point point-b"></span>
-          <span class="point point-c"></span>
+        <div class="hero-object" role="img" aria-label="集合 X 中的三个点经过映射 f，对应到集合 Y 中的三个点">
+          <svg class="mapping-diagram" viewBox="0 0 520 520" aria-hidden="true">
+            <defs>
+              <marker id="mapping-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z"></path>
+              </marker>
+            </defs>
+            <ellipse class="mapping-set" cx="145" cy="235" rx="105" ry="155"></ellipse>
+            <ellipse class="mapping-set" cx="375" cy="235" rx="105" ry="155"></ellipse>
+            <text class="set-label" x="145" y="55">X</text>
+            <text class="set-label" x="375" y="55">Y</text>
+            <text class="map-label" x="260" y="112">f</text>
+            <path class="mapping-arrow" d="M 145 145 C 215 110, 302 116, 366 150"></path>
+            <path class="mapping-arrow" d="M 145 225 C 220 205, 300 214, 366 230"></path>
+            <path class="mapping-arrow" d="M 145 305 C 215 345, 300 329, 366 300"></path>
+            <circle class="source-point" cx="145" cy="145" r="9"></circle>
+            <circle class="source-point" cx="145" cy="225" r="9"></circle>
+            <circle class="source-point" cx="145" cy="305" r="9"></circle>
+            <circle class="target-point" cx="375" cy="150" r="9"></circle>
+            <circle class="target-point" cx="375" cy="230" r="9"></circle>
+            <circle class="target-point" cx="375" cy="300" r="9"></circle>
+          </svg>
           <p>在适当的范畴中<br />一切都很自然</p>
         </div>
       </section>
