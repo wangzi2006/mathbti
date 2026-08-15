@@ -42,7 +42,7 @@ window.MATHBTI_DATA = {
   "questions": [
     {
       "id": "q01",
-      "title": "第一反应",
+      "title": "纠结",
       "stem": "请仅凭第一反应，经过充分思考后作答：你是否经常纠结？",
       "options": [
         {
@@ -88,7 +88,7 @@ window.MATHBTI_DATA = {
     },
     {
       "id": "q02",
-      "title": "成绩失常",
+      "title": "失常",
       "stem": "一次考试成绩远低于预期，你更可能：",
       "options": [
         {
@@ -239,7 +239,7 @@ window.MATHBTI_DATA = {
     },
     {
       "id": "q05",
-      "title": "书写映射的核",
+      "title": "核",
       "stem": "“我不是不会写这道题。我在脑子里已经把它完整地想明白了，只是这个想明白比较抽象，目前还没有成功映射到纸面。你现在看到的是一张白纸，但这不能证明我没有证明。事实上，白纸只是证明在书写空间中的像，而我的证明可能落入了书写映射的核中。”",
       "options": [
         {
@@ -285,7 +285,7 @@ window.MATHBTI_DATA = {
     },
     {
       "id": "q06",
-      "title": "中途换方法",
+      "title": "换方法",
       "stem": "一项任务做到一半，你发现了一个可能更好、但需要从头开始的新方法。你更可能：",
       "options": [
         {
@@ -377,7 +377,7 @@ window.MATHBTI_DATA = {
     },
     {
       "id": "q08",
-      "title": "计划取消",
+      "title": "取消",
       "stem": "期待已久的安排临时取消，你通常会：",
       "options": [
         {
@@ -423,7 +423,7 @@ window.MATHBTI_DATA = {
     },
     {
       "id": "q09",
-      "title": "选课踩雷",
+      "title": "踩雷",
       "stem": "你选课踩雷，老师讲课混乱，难以理解。这位老师此前从未开过这门课。你的选择是：",
       "options": [
         {
@@ -482,7 +482,7 @@ window.MATHBTI_DATA = {
     },
     {
       "id": "q10",
-      "title": "新的兴趣",
+      "title": "新兴趣",
       "stem": "你突然对一件新事物产生兴趣。",
       "options": [
         {
@@ -528,7 +528,7 @@ window.MATHBTI_DATA = {
     },
     {
       "id": "q11",
-      "title": "标点",
+      "title": "心情",
       "stem": "选一个最符合你此刻心情的答案：",
       "options": [
         {
@@ -574,7 +574,7 @@ window.MATHBTI_DATA = {
     },
     {
       "id": "q12",
-      "title": "一大段负面情绪",
+      "title": "负面情绪",
       "stem": "朋友突然发来一大段负面情绪。",
       "options": [
         {
@@ -620,7 +620,7 @@ window.MATHBTI_DATA = {
     },
     {
       "id": "q13",
-      "title": "Tag 缝合文",
+      "title": "缝合文",
       "stem": "popi 26小登江浙沪北京大学数院sms  \n大一拉拉，正在conn基模，plib颈部，tpdate姚班图班通班，上嫁xk信科字节跳动实习基模姐AI互联网大厂中，在pku有些discouraged  \n只好拿起优绩主义的绿色鹅腿当晚饭，一边学习llm大模型和quant知识  \n在tpdate上crush了可爱的马甲线wy物院女生，她正在辅修人工智能，希望以自己3.92的绩点能找到好的量化大厂  \n作为高认知群体我清楚地意识到学基数没有出路，想办法修信科计算机智能ee mee信双 yp智双双学位最后跨保基模  \n隔壁清华老登发课程测评，说他一开始跨保复读全考虑过，最后转专业拿了北大软微学位找了现在的清华AI强组，有了比较好的conn，毕业就可以deepseek、kimi、幻方、衍复、九坤、佳期、宽德、sjqy、qx、wy、td、zd、mh、wgby、邦戴、citadel、jump、jane、hrt、point72、2sigma、prop shop任选  \n基模llm cs ai quant毕业即巅峰，感觉处在黄金时代，高考考上北京大学是我这辈子最骄傲的事情",
       "options": [
         {
@@ -712,7 +712,7 @@ window.MATHBTI_DATA = {
     },
     {
       "id": "q15",
-      "title": "必要条件",
+      "title": "充要条件",
       "stem": "室友决定从今天起只用“必要条件”和“充分条件”与你交流。",
       "options": [
         {
@@ -817,7 +817,7 @@ window.MATHBTI_DATA = {
     },
     {
       "id": "q17",
-      "title": "小番茄事故",
+      "title": "小番茄",
       "stem": "你在吃小番茄的时候，汁水溅到了屏幕上。手机开始不受控制地往严肃的工作群里发：\n\n> 突突突突突突突突突突突突突突突突突突突突突突突突突突突突突突突突突突突突突突突突突突\n\n而工作群的上一条消息，是负责人丢了一个锅。当你发现时，已经过了撤回时间。",
       "options": [
         {
@@ -909,7 +909,7 @@ window.MATHBTI_DATA = {
     },
     {
       "id": "q19",
-      "title": "删除一个词",
+      "title": "删除",
       "stem": "你可以从世界上永久删除一个词。",
       "options": [
         {
@@ -955,7 +955,7 @@ window.MATHBTI_DATA = {
     },
     {
       "id": "q20",
-      "title": "没有截止日期",
+      "title": "想法",
       "stem": "你有一个很想完成、但没有任何截止日期的想法。",
       "options": [
         {
@@ -1047,7 +1047,7 @@ window.MATHBTI_DATA = {
     },
     {
       "id": "q22",
-      "title": "事后回答",
+      "title": "事后",
       "stem": "我经常在对话结束后，才想出当时真正想说的话。",
       "options": [
         {
@@ -1093,7 +1093,7 @@ window.MATHBTI_DATA = {
     },
     {
       "id": "q23",
-      "title": "遗失的正确答案",
+      "title": "遗失",
       "stem": "本题原本有一个正确答案，但出题人忘了。",
       "options": [
         {
@@ -1139,7 +1139,7 @@ window.MATHBTI_DATA = {
     },
     {
       "id": "q24",
-      "title": "今晚有空吗",
+      "title": "邀约",
       "stem": "群主在群里在安排活动，向大家征询活动时间；但除了群主外无其他人发言。",
       "options": [
         {
@@ -1231,7 +1231,7 @@ window.MATHBTI_DATA = {
     },
     {
       "id": "q26",
-      "title": "数学有什么用",
+      "title": "有什么用",
       "stem": "朋友问：“学数学到底有什么用？”",
       "options": [
         {
@@ -1277,7 +1277,7 @@ window.MATHBTI_DATA = {
     },
     {
       "id": "q27",
-      "title": "重命名 x",
+      "title": "重命名",
       "stem": "你获得一次永久修改数学字母 $x$ 名称的机会。",
       "options": [
         {
@@ -1323,7 +1323,7 @@ window.MATHBTI_DATA = {
     },
     {
       "id": "q28",
-      "title": "哪句话像你",
+      "title": "像",
       "stem": "以下哪句话最像你？",
       "options": [
         {
