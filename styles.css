@@ -274,7 +274,7 @@ main:focus { outline: none; }
 .portrait-card, .coordinate-card { padding: clamp(26px, 4vw, 44px); border: 1px solid var(--ink); background: var(--card); }
 .portrait-copy { margin: 0; font-family: var(--serif); font-size: 1.15rem; line-height: 2; }
 .math-note { margin-top: 34px; padding-top: 22px; border-top: 1px solid var(--line); }
-.math-note span { display: inline-block; margin-bottom: 10px; padding: 0 0 3px; color: var(--blue); border-bottom: 2px solid var(--blue); font-size: 0.74rem; font-weight: 800; }
+.math-note span { display: inline-block; margin-bottom: 10px; padding: 0 0 3px; color: var(--blue); border-bottom: 2px solid var(--blue); font-size: 0.74rem; font-weight: 800; letter-spacing: 0.14em; }
 .math-note p { margin: 0; color: var(--muted); }
 .coordinate-bars { display: grid; gap: 17px; }
 .coordinate-row { display: grid; gap: 6px; }
@@ -284,8 +284,6 @@ main:focus { outline: none; }
 .coordinate-value { font-family: Georgia, serif; font-size: 1.1rem; font-weight: 700; }
 .coordinate-track { height: 8px; background: var(--paper-deep); overflow: hidden; }
 .coordinate-fill { height: 100%; background: var(--blue); transform-origin: left; animation: grow 850ms cubic-bezier(.2,.8,.2,1) both; }
-.coordinate-row:nth-child(3n+2) .coordinate-fill { background: var(--tomato); }
-.coordinate-row:nth-child(3n) .coordinate-fill { background: #8eaf12; }
 @keyframes grow { from { transform: scaleX(0); } }
 .coordinate-note { margin: 28px 0 0; color: var(--muted); font-size: 0.78rem; }
 .result-actions { justify-content: center; }
