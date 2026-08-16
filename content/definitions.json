@@ -29,7 +29,7 @@
   },
   "normal_distribution": {
     "latex": "X\\sim\\mathcal N(\\mu,\\sigma^2)",
-    "plain": "概率集中在均值附近，同时保留向两侧无限延伸的尾部。"
+    "plain": "概率集中在均值附近，同时有着向两侧无限延伸的尾部。"
   },
   "cauchy_distribution": {
     "latex": "f(x)=\\frac{1}{\\pi\\gamma\\left[1+\\left(\\frac{x-x_0}{\\gamma}\\right)^2\\right]}",
@@ -45,7 +45,7 @@
   },
   "finite_field": {
     "latex": "|\\mathbb F_q|=q<\\infty",
-    "plain": "元素数量有限，但加减乘除仍在其中封闭。"
+    "plain": "元素数量有限，加减乘除在其中封闭。"
   },
   "cyclic_group": {
     "latex": "G=\\langle g\\rangle=\\{g^n:n\\in\\mathbb Z\\}",
@@ -61,7 +61,7 @@
   },
   "meromorphic_function": {
     "latex": "f:\\Omega\\to\\widehat{\\mathbb C}\\quad\\text{除孤立极点外全纯}",
-    "plain": "绝大多数地方全纯，只允许少数可描述的极点。"
+    "plain": "绝大多数地方全纯，只允许少数极点。"
   },
   "logarithm_branch": {
     "latex": "e^{\\operatorname{Log}z}=z\\qquad(z\\in\\Omega)",
@@ -73,7 +73,7 @@
   },
   "harmonic_function": {
     "latex": "\\Delta u=0",
-    "plain": "满足 Laplace 方程，并具有平均值性质。"
+    "plain": "满足 Laplace 方程，因此具有平均值性质。"
   },
   "power_series": {
     "latex": "\\sum_{n=0}^{\\infty}a_n(z-z_0)^n,\\qquad |z-z_0|<R",
@@ -137,11 +137,11 @@
   },
   "initial_sensitive_system": {
     "latex": "\\|x_0-y_0\\|\\ll1,\\qquad \\|\\Phi_t(x_0)-\\Phi_t(y_0)\\|>\\delta",
-    "plain": "极其接近的初始状态，随时间演化出显著差异。"
+    "plain": "从极其接近的初始状态出发，随时间推移而演化出显著差异。"
   },
   "variation_of_constants": {
     "latex": "x(t)=\\Phi(t)\\left[c+\\int_{t_0}^{t}\\Phi(s)^{-1}g(s)\\,ds\\right]",
-    "plain": "把齐次解中的常数改为随时间变化的函数，以吸收外部作用。"
+    "plain": "把齐次解中的常数改为随时间变化的函数，以适应外部作用。"
   },
   "picard_iteration": {
     "latex": "y_{n+1}(t)=y_0+\\int_{t_0}^{t}f(s,y_n(s))\\,ds",
