@@ -47,7 +47,7 @@ window.MATHBTI_DATA = {
       "options": [
         {
           "label": "A",
-          "text": "不纠结。",
+          "text": "不纠结",
           "delta": [
             -1,
             0,
@@ -60,7 +60,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "B",
-          "text": "请定义“经常”。",
+          "text": "请定义“经常”",
           "delta": [
             0,
             0,
@@ -73,7 +73,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "C",
-          "text": "本来不纠结，现在开始了。",
+          "text": "本来不纠结，现在开始了",
           "delta": [
             1,
             0,
@@ -93,7 +93,7 @@ window.MATHBTI_DATA = {
       "options": [
         {
           "label": "A",
-          "text": "先去看试卷，弄清楚问题出在哪里。",
+          "text": "先去看试卷，弄清楚问题出在哪里",
           "delta": [
             -1,
             0,
@@ -106,7 +106,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "B",
-          "text": "难受一阵，然后继续准备下一门。",
+          "text": "难受一阵，然后继续准备下一门",
           "delta": [
             0,
             0,
@@ -119,7 +119,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "C",
-          "text": "不太想碰这门课了。",
+          "text": "不太想碰这门课了",
           "delta": [
             1,
             0,
@@ -132,7 +132,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "D",
-          "text": "找朋友怒喷老师教考分离。",
+          "text": "找朋友怒喷老师教考分离",
           "delta": [
             1,
             0,
@@ -152,7 +152,7 @@ window.MATHBTI_DATA = {
       "options": [
         {
           "label": "A",
-          "text": "赌反面。宇宙差不多该收敛了。",
+          "text": "赌反面：差不多该收敛了",
           "delta": [
             0,
             0,
@@ -165,7 +165,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "B",
-          "text": "天王老子来了也是一半一半。",
+          "text": "天王老子来了也是一半一半",
           "delta": [
             0,
             0,
@@ -178,7 +178,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "C",
-          "text": "不赌。饭钱不是概率论习题。",
+          "text": "不赌，饭钱不是概率论习题",
           "delta": [
             0,
             0,
@@ -198,7 +198,7 @@ window.MATHBTI_DATA = {
       "options": [
         {
           "label": "A",
-          "text": "主要待在认识的人旁边。",
+          "text": "主要待在认识的人旁边",
           "delta": [
             0,
             -1,
@@ -211,7 +211,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "B",
-          "text": "别人来聊天时正常回应。",
+          "text": "别人来聊天时正常回应",
           "delta": [
             0,
             0,
@@ -224,7 +224,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "C",
-          "text": "会主动认识一两个新的人。",
+          "text": "会主动认识一两个新的人",
           "delta": [
             0,
             1,
@@ -240,11 +240,11 @@ window.MATHBTI_DATA = {
     {
       "id": "q05",
       "title": "核",
-      "stem": "“我不是不会写这道题。我在脑子里已经把它完整地想明白了，只是这个想明白比较抽象，目前还没有成功映射到纸面。你现在看到的是一张白纸，但这不能证明我没有证明。事实上，白纸只是证明在书写空间中的像，而我的证明可能落入了书写映射的核中。”",
+      "stem": "“我不是不会写这道题。我在脑子里已经把它完整地想明白了，只是比较抽象，目前还没有成功写到纸上。你现在看到的是一张白纸，但这不意味着我没有证明。事实上，纸只是证明在书写空间中的像，而我的证明可能落入了书写映射的核中。”",
       "options": [
         {
           "label": "A",
-          "text": "我懂。",
+          "text": "我懂",
           "delta": [
             0,
             0,
@@ -257,7 +257,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "B",
-          "text": "你先写第一行。",
+          "text": "你先写第一行",
           "delta": [
             0,
             0,
@@ -270,7 +270,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "C",
-          "text": "所以你不会。",
+          "text": "所以你不会",
           "delta": [
             0,
             0,
@@ -290,7 +290,7 @@ window.MATHBTI_DATA = {
       "options": [
         {
           "label": "A",
-          "text": "立即换用新方法，从头开始。",
+          "text": "立即换用新方法，从头开始",
           "delta": [
             0,
             0,
@@ -303,7 +303,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "B",
-          "text": "比较两种方法还要花多少时间，再作决定。",
+          "text": "比较两种方法还要花多少时间，再作决定",
           "delta": [
             0,
             0,
@@ -316,7 +316,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "C",
-          "text": "先按原来的方法做完，新方法留到下次再说。",
+          "text": "先按原来的方法做完，新方法留到下次再说",
           "delta": [
             0,
             0,
@@ -336,7 +336,7 @@ window.MATHBTI_DATA = {
       "options": [
         {
           "label": "A",
-          "text": "立即丢一个表情包热情回复。",
+          "text": "立即丢一个表情包热情回复",
           "delta": [
             -1,
             1,
@@ -349,7 +349,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "B",
-          "text": "等他把下一句话发出来，否则按兵不动。",
+          "text": "等他把下一句话发出来，否则按兵不动",
           "delta": [
             0,
             -1,
@@ -362,7 +362,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "C",
-          "text": "向共同好友询问他的情况。",
+          "text": "向共同好友询问他的情况",
           "delta": [
             1,
             0,
@@ -382,7 +382,7 @@ window.MATHBTI_DATA = {
       "options": [
         {
           "label": "A",
-          "text": "很快找到别的事情做。",
+          "text": "很快找到别的事情做",
           "delta": [
             -1,
             0,
@@ -395,7 +395,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "B",
-          "text": "有些失落，但过一会儿就好了。",
+          "text": "有些失落，但过一会儿就好了",
           "delta": [
             0,
             0,
@@ -408,7 +408,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "C",
-          "text": "接下来很长时间都提不起兴致。",
+          "text": "接下来很长时间都提不起兴致",
           "delta": [
             1,
             0,
@@ -428,7 +428,7 @@ window.MATHBTI_DATA = {
       "options": [
         {
           "label": "A",
-          "text": "仔细听课，试图从老师的抑扬顿挫中推敲考试重点。",
+          "text": "仔细听课，试图从老师的抑扬顿挫中推敲考试重点",
           "delta": [
             0,
             -1,
@@ -441,7 +441,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "B",
-          "text": "从不上课，通过作业、课程回放等，在考前迅速拟合考试。",
+          "text": "从不上课，通过作业、课程回放等，在考前迅速拟合考试",
           "delta": [
             0,
             -1,
@@ -454,7 +454,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "C",
-          "text": "呼朋引伴，组织选课同学共同揣摩老师意图。",
+          "text": "呼朋引伴，组织选课同学共同揣摩老师意图",
           "delta": [
             0,
             1,
@@ -467,7 +467,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "O",
-          "text": "愤而退课，冒着被约谈的风险在树洞上怒喷老师。",
+          "text": "愤而退课，冒着被约谈的风险在树洞上怒喷老师",
           "delta": [
             1,
             0,
@@ -487,7 +487,7 @@ window.MATHBTI_DATA = {
       "options": [
         {
           "label": "A",
-          "text": "当天就开始尝试。",
+          "text": "当天就开始尝试",
           "delta": [
             0,
             0,
@@ -500,7 +500,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "B",
-          "text": "先查资料，确认值得投入。",
+          "text": "先查资料，确认值得投入",
           "delta": [
             0,
             0,
@@ -513,7 +513,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "C",
-          "text": "收藏相关内容，以后有空再看。",
+          "text": "收藏相关内容，以后有空再看",
           "delta": [
             0,
             0,
@@ -579,7 +579,7 @@ window.MATHBTI_DATA = {
       "options": [
         {
           "label": "A",
-          "text": "认真回复其中提到的每一件事。",
+          "text": "认真回复其中提到的每一件事",
           "delta": [
             0,
             1,
@@ -592,7 +592,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "B",
-          "text": "先确认对方现在是否需要陪伴。",
+          "text": "先确认对方现在是否需要陪伴",
           "delta": [
             0,
             1,
@@ -605,7 +605,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "C",
-          "text": "不知道怎么回答，但不会完全不管。",
+          "text": "不知道怎么回答，但不会完全不管",
           "delta": [
             0,
             0,
@@ -671,7 +671,7 @@ window.MATHBTI_DATA = {
       "options": [
         {
           "label": "A",
-          "text": "会明显不舒服，宁愿重新开始。",
+          "text": "会明显不舒服，宁愿重新开始",
           "delta": [
             0,
             0,
@@ -684,7 +684,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "B",
-          "text": "稍微调整一下也可以。",
+          "text": "稍微调整一下也可以",
           "delta": [
             0,
             0,
@@ -697,7 +697,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "C",
-          "text": "只要最后做完，顺序并不重要。",
+          "text": "只要最后做完，顺序并不重要",
           "delta": [
             0,
             0,
@@ -717,7 +717,7 @@ window.MATHBTI_DATA = {
       "options": [
         {
           "label": "A",
-          "text": "要求他换回人话。",
+          "text": "要求他换回人话",
           "delta": [
             0,
             -1,
@@ -730,7 +730,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "B",
-          "text": "配合他，并告诉他学数学是生存的必要条件。",
+          "text": "配合他，并告诉他学数学是生存的必要条件",
           "delta": [
             0,
             1,
@@ -743,7 +743,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "C",
-          "text": "这不是我们继续交流的充分条件。",
+          "text": "这不是我们继续交流的充分条件",
           "delta": [
             0,
             0,
@@ -763,7 +763,7 @@ window.MATHBTI_DATA = {
       "options": [
         {
           "label": "A",
-          "text": "直接说出不同意见。",
+          "text": "直接说出不同意见",
           "delta": [
             0,
             0,
@@ -776,7 +776,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "B",
-          "text": "先听完，再决定是否有必要说。",
+          "text": "先听完，再决定是否有必要说",
           "delta": [
             0,
             1,
@@ -789,7 +789,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "C",
-          "text": "通常不说，除非它会影响最后结果。",
+          "text": "通常不说，除非它会影响最后结果",
           "delta": [
             0,
             0,
@@ -802,7 +802,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "D",
-          "text": "从来不说。",
+          "text": "从来不说",
           "delta": [
             0,
             -1,
@@ -822,7 +822,7 @@ window.MATHBTI_DATA = {
       "options": [
         {
           "label": "A",
-          "text": "默默地接过负责人在群里丢的锅。",
+          "text": "默默地接过负责人在群里丢的锅",
           "delta": [
             0,
             0,
@@ -835,7 +835,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "B",
-          "text": "继续不断地往群里发突突突：此时不疯，更待何时。",
+          "text": "继续不断地往群里发突突突：此时不疯，更待何时",
           "delta": [
             1,
             0,
@@ -848,7 +848,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "C",
-          "text": "只要零人询问，我就不解释，装鸵鸟。",
+          "text": "只要零人询问，我就不解释，装鸵鸟",
           "delta": [
             1,
             0,
@@ -868,7 +868,7 @@ window.MATHBTI_DATA = {
       "options": [
         {
           "label": "A",
-          "text": "去做早就想做但一直没做的事。",
+          "text": "去做早就想做但一直没做的事",
           "delta": [
             0,
             0,
@@ -881,7 +881,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "B",
-          "text": "临时看看有什么可去的地方。",
+          "text": "临时看看有什么可去的地方",
           "delta": [
             0,
             0,
@@ -894,7 +894,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "C",
-          "text": "按照平时的习惯度过。",
+          "text": "按照平时的习惯度过",
           "delta": [
             0,
             0,
@@ -960,7 +960,7 @@ window.MATHBTI_DATA = {
       "options": [
         {
           "label": "A",
-          "text": "先做出一个很粗糙的版本。",
+          "text": "先做出一个很粗糙的版本",
           "delta": [
             0,
             0,
@@ -973,7 +973,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "B",
-          "text": "等思路更清楚后再开始。",
+          "text": "等思路更清楚后再开始",
           "delta": [
             0,
             0,
@@ -986,7 +986,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "C",
-          "text": "很可能一直停留在“以后可以做”的阶段。",
+          "text": "很可能一直停留在“以后可以做”的阶段",
           "delta": [
             0,
             0,
@@ -1006,7 +1006,7 @@ window.MATHBTI_DATA = {
       "options": [
         {
           "label": "A",
-          "text": "作为下水道的鼠鼠也会骄傲地挺起胸膛。",
+          "text": "作为下水道的鼠鼠也会骄傲地挺起胸膛",
           "delta": [
             1,
             1,
@@ -1032,7 +1032,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "C",
-          "text": "这和我“就天天哭呗”有什么关系。",
+          "text": "这和我“就天天哭呗”有什么关系",
           "delta": [
             -1,
             -1,
@@ -1052,7 +1052,7 @@ window.MATHBTI_DATA = {
       "options": [
         {
           "label": "A",
-          "text": "很少。",
+          "text": "很少",
           "delta": [
             -1,
             0,
@@ -1065,7 +1065,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "B",
-          "text": "偶尔。",
+          "text": "偶尔",
           "delta": [
             0,
             0,
@@ -1078,7 +1078,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "C",
-          "text": "经常。",
+          "text": "经常",
           "delta": [
             1,
             0,
@@ -1098,7 +1098,7 @@ window.MATHBTI_DATA = {
       "options": [
         {
           "label": "A",
-          "text": "那我替他决定一个。",
+          "text": "那我替他决定一个",
           "delta": [
             0,
             0,
@@ -1111,7 +1111,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "B",
-          "text": "那现在就没有正确答案。",
+          "text": "那现在就没有正确答案",
           "delta": [
             0,
             0,
@@ -1124,7 +1124,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "C",
-          "text": "一般这种时候选 C。",
+          "text": "一般这种时候选 C",
           "delta": [
             0,
             0,
@@ -1144,7 +1144,7 @@ window.MATHBTI_DATA = {
       "options": [
         {
           "label": "A",
-          "text": "往群里丢一个约时间的链接。",
+          "text": "往群里丢一个约时间的链接",
           "delta": [
             0,
             1,
@@ -1157,7 +1157,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "B",
-          "text": "提供自己有空的时间段。",
+          "text": "提供自己有空的时间段",
           "delta": [
             0,
             0,
@@ -1170,7 +1170,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "C",
-          "text": "潜水，先等大多数人做回应。",
+          "text": "潜水，先等大多数人做回应",
           "delta": [
             0,
             -1,
@@ -1190,7 +1190,7 @@ window.MATHBTI_DATA = {
       "options": [
         {
           "label": "A",
-          "text": "很好，至少十二点前还能完成一件事。",
+          "text": "很好，至少十二点前还能完成一件事",
           "delta": [
             0,
             0,
@@ -1203,7 +1203,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "B",
-          "text": "把计划整体平移四小时四十八分钟。",
+          "text": "把计划整体平移四小时四十八分钟",
           "delta": [
             0,
             0,
@@ -1216,7 +1216,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "C",
-          "text": "今天这个初值不好，明天重新求解。",
+          "text": "今天这个初值不好，明天重新求解",
           "delta": [
             0,
             0,
@@ -1232,11 +1232,11 @@ window.MATHBTI_DATA = {
     {
       "id": "q26",
       "title": "有什么用",
-      "stem": "朋友问：“学数学到底有什么用？”",
+      "stem": "朋友问你学数学到底有什么用。",
       "options": [
         {
           "label": "A",
-          "text": "认真解释。",
+          "text": "认真解释",
           "delta": [
             -1,
             1,
@@ -1262,7 +1262,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "C",
-          "text": "说“没什么用”，然后继续学。",
+          "text": "说“没什么用”，然后继续学",
           "delta": [
             -1,
             -1,
@@ -1282,7 +1282,7 @@ window.MATHBTI_DATA = {
       "options": [
         {
           "label": "A",
-          "text": "改成“内个”。",
+          "text": "改成“内个”",
           "delta": [
             0,
             0,
@@ -1295,7 +1295,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "B",
-          "text": "公开拍卖命名权。",
+          "text": "公开拍卖命名权",
           "delta": [
             0,
             0,
@@ -1308,7 +1308,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "C",
-          "text": "不改，没必要给全人类添麻烦。",
+          "text": "不改，没必要给全人类添麻烦",
           "delta": [
             0,
             0,
@@ -1328,7 +1328,7 @@ window.MATHBTI_DATA = {
       "options": [
         {
           "label": "A",
-          "text": "这句话不像我。",
+          "text": "这句话不像我",
           "delta": [
             0,
             0,
@@ -1341,7 +1341,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "B",
-          "text": "另外两句话比较像我。",
+          "text": "另外两句话比较像我",
           "delta": [
             -1,
             0,
@@ -1354,7 +1354,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "C",
-          "text": "我不喜欢被三句话分类。",
+          "text": "我不喜欢被三句话分类",
           "delta": [
             1,
             0,
