@@ -305,21 +305,17 @@
 
     data.axisLabels.forEach((label, axis) => {
       const score = currentScores[axis];
-      const displayScore = Math.abs(score) < 0.005 ? "0.00" : score.toFixed(2);
+      const displayScore = Math.round((score + 1) * 50);
       const markerPercent = (score + 1) * 50;
-      const fillLeft = score < 0 ? markerPercent : 50;
-      const fillWidth = Math.abs(score) * 50;
-      const direction = score < 0 ? "is-negative" : "is-positive";
       const { mathName, plainName } = splitAxisLabel(label);
       const row = document.createElement("div");
       row.className = "coordinate-row";
       row.innerHTML = `
         <div class="coordinate-meta">
           <div class="coordinate-name"><strong>${escapeHtml(mathName)}</strong><span>${escapeHtml(plainName)}</span></div>
-          <strong class="coordinate-value">${displayScore}</strong>
+          <strong class="coordinate-value">${displayScore}%</strong>
         </div>
         <div class="coordinate-track">
-          <div class="coordinate-fill ${direction}" style="left: ${fillLeft}%; width: ${fillWidth}%"></div>
           <span class="coordinate-marker" style="left: ${markerPercent}%"></span>
         </div>
       `;

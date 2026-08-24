@@ -284,11 +284,7 @@ main:focus { outline: none; }
 .coordinate-name strong { font-size: 0.9rem; }
 .coordinate-name span { margin-left: 6px; color: var(--muted); font-size: 0.72rem; }
 .coordinate-value { font-family: var(--mono); font-size: 1.1rem; font-weight: 700; font-variant-numeric: tabular-nums; }
-.coordinate-track { position: relative; height: 9px; background: linear-gradient(90deg, rgba(39, 76, 255, 0.22) 0 50%, rgba(255, 90, 60, 0.22) 50% 100%); overflow: visible; }
-.coordinate-track::after { position: absolute; top: -3px; bottom: -3px; left: 50%; width: 1px; background: rgba(23, 23, 20, 0.55); content: ""; transform: translateX(-0.5px); }
-.coordinate-fill { position: absolute; top: 0; height: 100%; }
-.coordinate-fill.is-negative { background: var(--blue); }
-.coordinate-fill.is-positive { background: var(--tomato); }
+.coordinate-track { position: relative; height: 9px; background: var(--blue); overflow: visible; }
 .coordinate-marker { position: absolute; z-index: 1; top: 50%; width: 7px; height: 15px; border: 2px solid var(--paper); background: var(--ink); transform: translate(-50%, -50%); }
 .coordinate-note { margin: 28px 0 0; color: var(--muted); font-size: 0.78rem; }
 .neighbor-object { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); }
