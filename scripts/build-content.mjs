@@ -52,11 +52,11 @@ function parseResults(markdown, prototypes, definitions) {
   });
 }
 
-function calculateBounds(questions) {
-  const min = Array(7).fill(0);
-  const max = Array(7).fill(0);
+function calculateBounds(questions, dimensionCount) {
+  const min = Array(dimensionCount).fill(0);
+  const max = Array(dimensionCount).fill(0);
   for (const question of questions) {
-    for (let axis = 0; axis < 7; axis += 1) {
+    for (let axis = 0; axis < dimensionCount; axis += 1) {
       const values = question.options.map((option) => option.delta[axis]);
       min[axis] += Math.min(...values);
       max[axis] += Math.max(...values);
@@ -67,6 +67,12 @@ function calculateBounds(questions) {
 
 const questions = parseQuestions(read("questions.md"));
 const prototypeData = JSON.parse(read("prototypes.json"));
+const dimensionCount = prototypeData.axisOrder.length;
+questions.forEach((question) => question.options.forEach((option) => {
+  if (option.delta.length !== dimensionCount || option.delta.some((value) => !Number.isFinite(value))) {
+    throw new Error(`${question.id} has an invalid coordinate vector`);
+  }
+}));
 const definitions = JSON.parse(read("definitions.json"));
 const results = parseResults(read("results.md"), prototypeData.prototypes, definitions);
 const data = {
@@ -74,7 +80,9 @@ const data = {
   subtitle: "无厘头数学人格测试",
   axisOrder: prototypeData.axisOrder,
   axisLabels: prototypeData.axisLabels,
-  bounds: calculateBounds(questions),
+  bounds: calculateBounds(questions, dimensionCount),
+  consecutiveSkipThreshold: 7,
+  totalSkipThreshold: 12,
   questions,
   results,
 };

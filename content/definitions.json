@@ -146,5 +146,9 @@
   "picard_iteration": {
     "latex": "y_{n+1}(t)=y_0+\\int_{t_0}^{t}f(s,y_n(s))\\,ds",
     "plain": "从初始近似出发反复代入，在适当条件下收敛到方程的解。"
+  },
+  "small_domain_function": {
+    "latex": "f:D\\to Y,\\qquad D\\subset X,\\qquad m(D)\\ll m(X)",
+    "plain": "函数只在 X 中面积（测度）很小的定义域 D 上取值，即 m(D) 远小于 m(X)。"
   }
 }

@@ -7,7 +7,7 @@
     return;
   }
 
-  const storageKey = "mathbti-progress-v1";
+  const storageKey = "mathbti-progress-v2";
   const screens = {
     home: document.querySelector("#home-screen"),
     quiz: document.querySelector("#quiz-screen"),
@@ -27,6 +27,7 @@
     questionTitle: document.querySelector("#question-title"),
     questionStem: document.querySelector("#question-stem"),
     options: document.querySelector("#options"),
+    skip: document.querySelector("#skip-button"),
     resultName: document.querySelector("#result-name"),
     resultFormula: document.querySelector("#result-formula"),
     resultDefinition: document.querySelector("#result-definition"),
@@ -34,6 +35,8 @@
     resultPortrait: document.querySelector("#result-portrait"),
     resultNote: document.querySelector("#result-note"),
     coordinateBars: document.querySelector("#coordinate-bars"),
+    neighborName: document.querySelector("#neighbor-name"),
+    neighborTagline: document.querySelector("#neighbor-tagline"),
     share: document.querySelector("#share-button"),
     restart: document.querySelector("#restart-button"),
     shareStatus: document.querySelector("#share-status"),
@@ -100,7 +103,7 @@
       const saved = JSON.parse(localStorage.getItem(storageKey));
       if (!saved || !Array.isArray(saved.answers) || saved.answers.length !== data.questions.length) return;
       state.answers = saved.answers.map((answer, index) => {
-        const valid = Number.isInteger(answer) && answer >= 0 && answer < data.questions[index].options.length;
+        const valid = Number.isInteger(answer) && answer >= -1 && answer < data.questions[index].options.length;
         return valid ? answer : null;
       });
       const firstBlank = state.answers.findIndex((answer) => answer === null);
@@ -152,15 +155,11 @@
       button.addEventListener("click", () => selectOption(optionIndex));
       els.options.append(button);
     });
+    els.skip.classList.toggle("is-selected", state.answers[state.current] === -1);
     renderMath(els.questionStem);
   }
 
-  function selectOption(optionIndex) {
-    clearTimeout(advanceTimer);
-    state.answers[state.current] = optionIndex;
-    saveProgress();
-    [...els.options.children].forEach((button, index) => button.classList.toggle("is-selected", index === optionIndex));
-
+  function advanceAfterAnswer() {
     advanceTimer = window.setTimeout(() => {
       if (state.current < data.questions.length - 1) {
         state.current += 1;
@@ -171,22 +170,57 @@
     }, 230);
   }
 
+  function selectOption(optionIndex) {
+    clearTimeout(advanceTimer);
+    state.answers[state.current] = optionIndex;
+    saveProgress();
+    [...els.options.children].forEach((button, index) => button.classList.toggle("is-selected", index === optionIndex));
+    els.skip.classList.remove("is-selected");
+    advanceAfterAnswer();
+  }
+
+  function skipQuestion() {
+    clearTimeout(advanceTimer);
+    state.answers[state.current] = -1;
+    saveProgress();
+    [...els.options.children].forEach((button) => button.classList.remove("is-selected"));
+    els.skip.classList.add("is-selected");
+    advanceAfterAnswer();
+  }
+
   function calculateScores() {
-    const raw = Array(7).fill(0);
+    const dimensionCount = data.axisOrder.length;
+    const raw = Array(dimensionCount).fill(0);
+    const min = Array(dimensionCount).fill(0);
+    const max = Array(dimensionCount).fill(0);
     state.answers.forEach((optionIndex, questionIndex) => {
+      if (optionIndex === -1) return;
+      const question = data.questions[questionIndex];
       const answer = data.questions[questionIndex].options[optionIndex];
       answer.delta.forEach((value, axis) => { raw[axis] += value; });
+      for (let axis = 0; axis < dimensionCount; axis += 1) {
+        const values = question.options.map((option) => option.delta[axis]);
+        min[axis] += Math.min(...values);
+        max[axis] += Math.max(...values);
+      }
     });
     return raw.map((value, axis) => {
-      const span = data.bounds.max[axis] - data.bounds.min[axis];
-      return span === 0 ? 50 : clamp(((value - data.bounds.min[axis]) / span) * 100, 0, 100);
+      if (value < 0) {
+        const extent = Math.abs(min[axis]);
+        return extent === 0 ? 0 : clamp(value / extent, -1, 0);
+      }
+      if (value > 0) {
+        const extent = max[axis];
+        return extent === 0 ? 0 : clamp(value / extent, 0, 1);
+      }
+      return 0;
     });
   }
 
   function closestResult(scores) {
     let bestDistance = Infinity;
     let candidates = [];
-    for (const result of data.results) {
+    for (const result of data.results.filter((item) => !item.special)) {
       const distance = result.coordinates.reduce((sum, coordinate, axis) => sum + ((scores[axis] - coordinate) ** 2), 0);
       if (distance < bestDistance - 1e-9) {
         bestDistance = distance;
@@ -205,7 +239,23 @@
       return;
     }
     const scores = calculateScores();
-    const result = closestResult(scores);
+    let totalSkipped = 0;
+    let consecutiveSkipped = 0;
+    let longestSkipStreak = 0;
+    state.answers.forEach((answer) => {
+      if (answer === -1) {
+        totalSkipped += 1;
+        consecutiveSkipped += 1;
+        longestSkipStreak = Math.max(longestSkipStreak, consecutiveSkipped);
+      } else {
+        consecutiveSkipped = 0;
+      }
+    });
+    const unlocksSkipResult = longestSkipStreak >= data.consecutiveSkipThreshold
+      || totalSkipped >= data.totalSkipThreshold;
+    const result = unlocksSkipResult
+      ? data.results.find((item) => item.special === "skip")
+      : closestResult(scores);
     localStorage.removeItem(storageKey);
     els.resume.classList.add("is-hidden");
     showResult(result, scores, { updateUrl: true });
@@ -227,9 +277,23 @@
     return { mathName, plainName: plainName || "" };
   }
 
+  function closestNeighbor(result, scores) {
+    let neighbor = null;
+    let bestDistance = Infinity;
+    for (const candidate of data.results) {
+      if (candidate.id === result.id || candidate.special) continue;
+      const distance = candidate.coordinates.reduce((sum, coordinate, axis) => sum + ((scores[axis] - coordinate) ** 2), 0);
+      if (distance < bestDistance) {
+        bestDistance = distance;
+        neighbor = candidate;
+      }
+    }
+    return neighbor;
+  }
+
   function showResult(result, scores, { updateUrl = false } = {}) {
     currentResult = result;
-    currentScores = scores.map((score) => clamp(Number(score) || 0, 0, 100));
+    currentScores = scores.map((score) => clamp(Number(score) || 0, -1, 1));
     els.resultName.textContent = result.name;
     setResultFormula(result.definition.latex);
     els.resultDefinition.textContent = result.definition.plain;
@@ -240,19 +304,31 @@
     els.coordinateBars.replaceChildren();
 
     data.axisLabels.forEach((label, axis) => {
-      const score = Math.round(currentScores[axis]);
+      const score = currentScores[axis];
+      const displayScore = Math.abs(score) < 0.005 ? "0.00" : score.toFixed(2);
+      const markerPercent = (score + 1) * 50;
+      const fillLeft = score < 0 ? markerPercent : 50;
+      const fillWidth = Math.abs(score) * 50;
+      const direction = score < 0 ? "is-negative" : "is-positive";
       const { mathName, plainName } = splitAxisLabel(label);
       const row = document.createElement("div");
       row.className = "coordinate-row";
       row.innerHTML = `
         <div class="coordinate-meta">
           <div class="coordinate-name"><strong>${escapeHtml(mathName)}</strong><span>${escapeHtml(plainName)}</span></div>
-          <strong class="coordinate-value">${score}</strong>
+          <strong class="coordinate-value">${displayScore}</strong>
         </div>
-        <div class="coordinate-track"><div class="coordinate-fill" style="width: ${score}%"></div></div>
+        <div class="coordinate-track">
+          <div class="coordinate-fill ${direction}" style="left: ${fillLeft}%; width: ${fillWidth}%"></div>
+          <span class="coordinate-marker" style="left: ${markerPercent}%"></span>
+        </div>
       `;
       els.coordinateBars.append(row);
     });
+
+    const neighbor = closestNeighbor(result, currentScores);
+    els.neighborName.textContent = neighbor?.name || "";
+    els.neighborTagline.textContent = neighbor?.tagline || "";
 
     if (updateUrl) updateShareUrl(result, currentScores);
     document.title = `${result.name}｜MathBTI`;
@@ -262,7 +338,7 @@
   function updateShareUrl(result, scores) {
     const url = new URL(window.location.href);
     url.searchParams.set("result", result.id);
-    url.searchParams.set("scores", scores.map((score) => Math.round(score)).join(","));
+    url.searchParams.set("scores", scores.map((score) => Number(score).toFixed(2)).join(","));
     history.replaceState({ result: result.id }, "", url);
   }
 
@@ -324,7 +400,7 @@
     const result = data.results.find((item) => item.id === id);
     if (!result) return false;
     const parsedScores = (params.get("scores") || "").split(",").map(Number);
-    const scores = parsedScores.length === 7 && parsedScores.every(Number.isFinite) ? parsedScores : result.coordinates;
+    const scores = parsedScores.length === data.axisOrder.length && parsedScores.every(Number.isFinite) ? parsedScores : result.coordinates;
     showResult(result, scores, { updateUrl: false });
     return true;
   }
@@ -339,6 +415,7 @@
     }
   });
   els.quit.addEventListener("click", goHome);
+  els.skip.addEventListener("click", skipQuestion);
   els.share.addEventListener("click", shareResult);
   els.restart.addEventListener("click", () => {
     clearShareUrl();
@@ -366,6 +443,7 @@
     if (Number.isInteger(optionIndex) && optionIndex >= 0 && optionIndex < data.questions[state.current].options.length) {
       selectOption(optionIndex);
     }
+    if (event.key.toLowerCase() === "s") skipQuestion();
   });
 
   renderGallery();
