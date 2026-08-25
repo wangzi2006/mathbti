@@ -11,11 +11,11 @@
     <title>MathBTI｜无厘头数学人格测试</title>
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous" />
-    <link rel="stylesheet" href="styles.css?v=8" />
+    <link rel="stylesheet" href="styles.css?v=9" />
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
-    <script defer src="site-data.js?v=9"></script>
-    <script defer src="app.js?v=10"></script>
+    <script defer src="site-data.js?v=10"></script>
+    <script defer src="app.js?v=11"></script>
   </head>
   <body>
     <div class="noise" aria-hidden="true"></div>
@@ -113,7 +113,9 @@
             <p class="coordinate-note">坐标只是存在在那里，不声不响，不做解释。</p>
             <div class="neighbor-object">
               <p class="neighbor-label">邻近对象</p>
-              <strong id="neighbor-name"></strong>
+              <button id="neighbor-link" class="neighbor-link" type="button">
+                <strong id="neighbor-name"></strong><span aria-hidden="true">↗</span>
+              </button>
               <p id="neighbor-tagline"></p>
             </div>
           </aside>
@@ -129,7 +131,7 @@
       <section id="gallery-screen" class="screen gallery-screen is-hidden" aria-labelledby="gallery-title">
         <div class="page-heading">
           <p class="eyebrow">THE COMPLETE SPACE</p>
-          <h1 id="gallery-title">38 种可能的结果</h1>
+          <h1 id="gallery-title">37 种常规结果</h1>
           <p>把一些数学对象暂时借给人类。</p>
         </div>
         <div id="gallery-grid" class="gallery-grid"></div>

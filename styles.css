@@ -289,7 +289,12 @@ main:focus { outline: none; }
 .coordinate-note { margin: 28px 0 0; color: var(--muted); font-size: 0.78rem; }
 .neighbor-object { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); }
 .neighbor-label { margin: 0 0 7px; color: var(--muted); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.08em; }
-.neighbor-object strong { font-family: var(--serif); font-size: 1.15rem; }
+.neighbor-link { display: inline-flex; padding: 0; align-items: baseline; gap: 7px; border: 0; background: transparent; color: var(--ink); cursor: pointer; text-align: left; }
+.neighbor-link strong { font-family: var(--serif); font-size: 1.15rem; }
+.neighbor-link span { color: var(--blue); font-size: 0.8rem; transition: transform 150ms; }
+.neighbor-link:hover strong { text-decoration: underline; text-decoration-color: var(--blue); text-underline-offset: 4px; }
+.neighbor-link:hover span { transform: translate(2px, -2px); }
+.neighbor-link:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
 .neighbor-object > p:last-child { margin: 7px 0 0; color: var(--muted); font-size: 0.76rem; line-height: 1.55; }
 .result-actions { justify-content: center; }
 .share-status { min-height: 1.5em; margin: 18px 0 0; color: var(--muted); text-align: center; font-size: 0.82rem; }

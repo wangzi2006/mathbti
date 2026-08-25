@@ -35,6 +35,7 @@
     resultPortrait: document.querySelector("#result-portrait"),
     resultNote: document.querySelector("#result-note"),
     coordinateBars: document.querySelector("#coordinate-bars"),
+    neighborLink: document.querySelector("#neighbor-link"),
     neighborName: document.querySelector("#neighbor-name"),
     neighborTagline: document.querySelector("#neighbor-tagline"),
     share: document.querySelector("#share-button"),
@@ -49,6 +50,7 @@
   };
   let currentResult = null;
   let currentScores = null;
+  let currentNeighbor = null;
   let advanceTimer = null;
 
   const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
@@ -328,9 +330,10 @@
       els.coordinateBars.append(row);
     });
 
-    const neighbor = closestNeighbor(result, currentScores);
-    els.neighborName.textContent = neighbor?.name || "";
-    els.neighborTagline.textContent = neighbor?.tagline || "";
+    currentNeighbor = closestNeighbor(result, currentScores);
+    els.neighborName.textContent = currentNeighbor?.name || "";
+    els.neighborTagline.textContent = currentNeighbor?.tagline || "";
+    els.neighborLink.disabled = !currentNeighbor;
 
     if (updateUrl) updateShareUrl(result, currentScores);
     document.title = `${result.name}｜MathBTI`;
@@ -375,7 +378,7 @@
 
   function renderGallery() {
     els.gallery.replaceChildren();
-    data.results.forEach((result, index) => {
+    data.results.filter((result) => !result.special).forEach((result, index) => {
       const card = document.createElement("button");
       card.type = "button";
       card.className = "gallery-card";
@@ -419,6 +422,10 @@
   els.quit.addEventListener("click", goHome);
   els.skip.addEventListener("click", skipQuestion);
   els.share.addEventListener("click", shareResult);
+  els.neighborLink.addEventListener("click", () => {
+    if (!currentNeighbor) return;
+    showResult(currentNeighbor, currentNeighbor.coordinates, { updateUrl: true });
+  });
   els.restart.addEventListener("click", () => {
     clearShareUrl();
     startQuiz();

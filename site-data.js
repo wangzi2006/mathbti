@@ -2314,7 +2314,7 @@ window.MATHBTI_DATA = {
       "note": "这个函数只在全集中面积很小的一部分上有定义；对于其余输入，它不返回值。",
       "definition": {
         "latex": "f:D\\to Y,\\qquad D\\subset X,\\qquad m(D)\\ll m(X)",
-        "plain": "函数只在 X 中面积（测度）很小的定义域 D 上取值，即 m(D) 远小于 m(X)。"
+        "plain": "映射只在 X 中占很小一部分的 D 上有定义。"
       }
     }
   ]
