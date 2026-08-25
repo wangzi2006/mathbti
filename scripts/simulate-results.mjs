@@ -37,7 +37,7 @@ function distances(scores) {
   return results.map((result) => result.coordinates.reduce(
     (sum, coordinate, axis) => sum + ((scores[axis] - coordinate) ** 2),
     0,
-  ));
+  ) + (Number(result.selectionOffset) || 0));
 }
 
 function closestIndex(scores) {

@@ -225,7 +225,8 @@
     let bestDistance = Infinity;
     let candidates = [];
     for (const result of data.results.filter((item) => !item.special)) {
-      const distance = result.coordinates.reduce((sum, coordinate, axis) => sum + ((scores[axis] - coordinate) ** 2), 0);
+      const distance = result.coordinates.reduce((sum, coordinate, axis) => sum + ((scores[axis] - coordinate) ** 2), 0)
+        + (Number(result.selectionOffset) || 0);
       if (distance < bestDistance - 1e-9) {
         bestDistance = distance;
         candidates = [result];
