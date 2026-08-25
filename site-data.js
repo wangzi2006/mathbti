@@ -1509,7 +1509,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "B",
-          "text": "短暂处理事情后，再回到",
+          "text": "短暂处理事情后再回来",
           "delta": [
             0.64,
             0.04,
