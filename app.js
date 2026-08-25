@@ -52,6 +52,10 @@
   let advanceTimer = null;
 
   const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+  const displayCoordinate = (score) => {
+    const normalized = clamp(Number(score) || 0, -1, 1);
+    return (1.25 * normalized) - (0.25 * (normalized ** 3));
+  };
   const escapeHtml = (value) => String(value)
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
@@ -305,8 +309,9 @@
 
     data.axisLabels.forEach((label, axis) => {
       const score = currentScores[axis];
-      const displayScore = Math.round((score + 1) * 50);
-      const markerPercent = (score + 1) * 50;
+      const displayedCoordinate = displayCoordinate(score);
+      const displayScore = Math.round((displayedCoordinate + 1) * 50);
+      const markerPercent = (displayedCoordinate + 1) * 50;
       const { mathName, plainName } = splitAxisLabel(label);
       const row = document.createElement("div");
       row.className = "coordinate-row";
