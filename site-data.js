@@ -154,7 +154,7 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "B",
-          "text": "天王老子来了也是一半一半",
+          "text": "赌正面：这当然是一枚不正常的硬币",
           "delta": [
             0,
             0,
@@ -165,6 +165,17 @@ window.MATHBTI_DATA = {
         },
         {
           "label": "C",
+          "text": "天王老子来了也是一半一半",
+          "delta": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "label": "D",
           "text": "不赌，饭钱不是概率论习题",
           "delta": [
             0,
